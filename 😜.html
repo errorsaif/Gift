@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدية</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            background-color: #ff66b2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .heart {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gift-box" onclick="openGift()">
+    🎁
+</div>
+
+<div class="message" id="message">
+    كل عام وأنتِ بخير ليلى، بحبك <span class="heart">❤️💋</span>
+</div>
+
+<script>
+    function openGift() {
+        document.querySelector('.gift-box').style.display = 'none';
+        document.getElementById('message').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
